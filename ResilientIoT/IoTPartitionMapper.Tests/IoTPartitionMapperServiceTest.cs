@@ -14,18 +14,6 @@ namespace IoTPartitionMapper.Tests
 {
     public class MockIoTPartitionMapper : IoTPartitionMapperService
     {
-        internal static ICodePackageActivationContext activationontext = new MockCodePackageActivationContext(
-            "fabric:/someapp",
-            "SomeAppType",
-            "Code",
-            "1.0.0.0",
-            Guid.NewGuid().ToString(),
-            @"C:\Log",
-            @"C:\Temp",
-            @"C:\Work",
-            "ServiceManifest",
-            "1.0.0.0"
-            );
 
         public MockIoTPartitionMapper(StatefulServiceContext context) : base(context)
         {
@@ -49,7 +37,7 @@ namespace IoTPartitionMapper.Tests
     
 
     [TestClass]
-    public class UnitTest1
+    public class IoTPartitionMapperServiceTest
     {
         private MockIoTPartitionMapper service;
 
@@ -73,23 +61,7 @@ namespace IoTPartitionMapper.Tests
             {
                 Assert.AreEqual(expected[i], result.Value[i]);
             }
-            // Assert.AreEqual(1, 1);
         }
 
-  //      [TestMethod]
-  //      public async Task TestMethodAsync()
-  //      {
-            //var context = new StatefulServiceContext(new NodeContext("192.168.11.10", new NodeId(new BigInteger(3), new BigInteger(1)), new BigInteger(1), "Node1", "some") , new Mock<ICodePackageActivationContext>().Object, "aaaType", new Uri("fabric:/aaa"), null, new Guid(), 1);
-            //var stateManager = new Mock<IReliableStateManagerReplica>();
-            //var dictionary = new Mock<IReliableDictionary<string, long>>(MockBehavior.Strict);
-            //var dictionaryObject = dictionary.Object;
-            //stateManager.Setup(x => x.GetOrAddAsync<IReliableDictionary<string, long>>("MyDictionary")).Returns(Task.FromResult(dictionaryObject));
-            //var serviceMock = new IoTPartitionMapperService(context, stateManager.Object);
-            //await serviceMock.GetIoTHubPartitions();
-            //Assert.AreEqual(1, 1);
-
-
-            
-    //    }
     }
 }
