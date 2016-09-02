@@ -7,22 +7,58 @@ Project("{A07B5EB6-E848-4116-A8D0-A826331D98C6}") = "ResilientIoT", "ResilientIo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IoTPartitionMapper", "IoTPartitionMapper\IoTPartitionMapper.csproj", "{F120B2D4-93FA-455D-901B-11C8978EF19A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IoTPartitionMapper.Tests", "IoTPartitionMapper.Tests\IoTPartitionMapper.Tests.csproj", "{170088DE-F64D-4074-BDC4-7BE4B78B382F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mocks", "Mocks\Mocks.csproj", "{C37891BE-C720-4ECC-B0F3-B2D583170883}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{143A170D-B44C-4FFD-B3CB-095A0F150314}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
 		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CDB7AC51-A1D5-4D5E-BB84-E36D5ABD0B86}.Debug|Any CPU.ActiveCfg = Debug|x64
 		{CDB7AC51-A1D5-4D5E-BB84-E36D5ABD0B86}.Debug|x64.ActiveCfg = Debug|x64
 		{CDB7AC51-A1D5-4D5E-BB84-E36D5ABD0B86}.Debug|x64.Build.0 = Debug|x64
 		{CDB7AC51-A1D5-4D5E-BB84-E36D5ABD0B86}.Debug|x64.Deploy.0 = Debug|x64
+		{CDB7AC51-A1D5-4D5E-BB84-E36D5ABD0B86}.Release|Any CPU.ActiveCfg = Release|x64
 		{CDB7AC51-A1D5-4D5E-BB84-E36D5ABD0B86}.Release|x64.ActiveCfg = Release|x64
 		{CDB7AC51-A1D5-4D5E-BB84-E36D5ABD0B86}.Release|x64.Build.0 = Release|x64
 		{CDB7AC51-A1D5-4D5E-BB84-E36D5ABD0B86}.Release|x64.Deploy.0 = Release|x64
+		{F120B2D4-93FA-455D-901B-11C8978EF19A}.Debug|Any CPU.ActiveCfg = Debug|x64
 		{F120B2D4-93FA-455D-901B-11C8978EF19A}.Debug|x64.ActiveCfg = Debug|x64
 		{F120B2D4-93FA-455D-901B-11C8978EF19A}.Debug|x64.Build.0 = Debug|x64
+		{F120B2D4-93FA-455D-901B-11C8978EF19A}.Release|Any CPU.ActiveCfg = Release|x64
 		{F120B2D4-93FA-455D-901B-11C8978EF19A}.Release|x64.ActiveCfg = Release|x64
 		{F120B2D4-93FA-455D-901B-11C8978EF19A}.Release|x64.Build.0 = Release|x64
+		{170088DE-F64D-4074-BDC4-7BE4B78B382F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{170088DE-F64D-4074-BDC4-7BE4B78B382F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{170088DE-F64D-4074-BDC4-7BE4B78B382F}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{170088DE-F64D-4074-BDC4-7BE4B78B382F}.Debug|x64.Build.0 = Debug|Any CPU
+		{170088DE-F64D-4074-BDC4-7BE4B78B382F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{170088DE-F64D-4074-BDC4-7BE4B78B382F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{170088DE-F64D-4074-BDC4-7BE4B78B382F}.Release|x64.ActiveCfg = Release|Any CPU
+		{170088DE-F64D-4074-BDC4-7BE4B78B382F}.Release|x64.Build.0 = Release|Any CPU
+		{C37891BE-C720-4ECC-B0F3-B2D583170883}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C37891BE-C720-4ECC-B0F3-B2D583170883}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C37891BE-C720-4ECC-B0F3-B2D583170883}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{C37891BE-C720-4ECC-B0F3-B2D583170883}.Debug|x64.Build.0 = Debug|Any CPU
+		{C37891BE-C720-4ECC-B0F3-B2D583170883}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C37891BE-C720-4ECC-B0F3-B2D583170883}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C37891BE-C720-4ECC-B0F3-B2D583170883}.Release|x64.ActiveCfg = Release|Any CPU
+		{C37891BE-C720-4ECC-B0F3-B2D583170883}.Release|x64.Build.0 = Release|Any CPU
+		{143A170D-B44C-4FFD-B3CB-095A0F150314}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{143A170D-B44C-4FFD-B3CB-095A0F150314}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{143A170D-B44C-4FFD-B3CB-095A0F150314}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{143A170D-B44C-4FFD-B3CB-095A0F150314}.Debug|x64.Build.0 = Debug|Any CPU
+		{143A170D-B44C-4FFD-B3CB-095A0F150314}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{143A170D-B44C-4FFD-B3CB-095A0F150314}.Release|Any CPU.Build.0 = Release|Any CPU
+		{143A170D-B44C-4FFD-B3CB-095A0F150314}.Release|x64.ActiveCfg = Release|Any CPU
+		{143A170D-B44C-4FFD-B3CB-095A0F150314}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

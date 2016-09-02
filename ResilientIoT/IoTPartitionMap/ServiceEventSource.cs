@@ -7,9 +7,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.ServiceFabric.Services.Runtime;
 
-namespace IotPartitionMapService
+namespace IoTPartitionMap
 {
-    [EventSource(Name = "MyCompany-ResilientIoT-IoTPartitionMapper")]
+    [EventSource(Name = "MyCompany-ResilientIoT-IoTPartitionMap")]
     internal sealed class ServiceEventSource : EventSource
     {
         public static readonly ServiceEventSource Current = new ServiceEventSource();
