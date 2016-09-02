@@ -8,14 +8,14 @@ using Microsoft.ServiceFabric.Data.Collections;
 using Microsoft.ServiceFabric.Services.Communication.Runtime;
 using Microsoft.ServiceFabric.Services.Runtime;
 
-namespace IoTPartitionMapper
+namespace IoTPartitionMap
 {
     /// <summary>
     /// An instance of this class is created for each service replica by the Service Fabric runtime.
     /// </summary>
-    internal sealed class IoTPartitionMapper : StatefulService
+    internal sealed class IoTPartitionMap : StatefulService
     {
-        public IoTPartitionMapper(StatefulServiceContext context)
+        public IoTPartitionMap(StatefulServiceContext context)
             : base(context)
         { }
 
