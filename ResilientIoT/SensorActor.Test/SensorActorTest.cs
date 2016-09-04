@@ -19,15 +19,13 @@ namespace SensorActor.Test
         [TestMethod]
         public async Task TestMethod1Async()
         {
-            MockServiceProxyFactory serviceProxyFactory = new MockServiceProxyFactory();
-            serviceProxyFactory.AssociateMockServiceAndName(new Uri("fabric:/someapp/" + "AnyActorService"), MockIoTPartitionMapper.MockObjectFactory());
-            var actor = await CreateSensorActor(serviceProxyFactory);
+            var actor = await CreateSensorActor();
             await actor.SetIndexAsync(1);
             var actorState = await actor.StateManager.GetStateAsync<SensorActor.ActorState>("MyState");
             Assert.AreEqual(1, actorState.Index);
         }
 
-        private static async Task<SensorActor> CreateSensorActor(MockServiceProxyFactory serviceProxyFactory)
+        private static async Task<SensorActor> CreateSensorActor()
         {
             var target = new SensorActor();
 
