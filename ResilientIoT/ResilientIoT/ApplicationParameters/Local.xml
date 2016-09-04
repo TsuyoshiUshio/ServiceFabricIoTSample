@@ -4,5 +4,7 @@
     <Parameter Name="IoTPartitionMapper_PartitionCount" Value="1" />
     <Parameter Name="IoTPartitionMapper_MinReplicaSetSize" Value="3" />
     <Parameter Name="IoTPartitionMapper_TargetReplicaSetSize" Value="3" />
+    <Parameter Name="FloorActorService_PartitionCount" Value="1" />
+    <Parameter Name="SensorActorService_PartitionCount" Value="1" />
   </Parameters>
 </Application>

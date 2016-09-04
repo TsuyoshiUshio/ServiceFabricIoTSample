@@ -27,7 +27,9 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\FloorActor\FloorActor.csproj" />
     <ProjectReference Include="..\IoTPartitionMapper\IoTPartitionMapper.csproj" />
+    <ProjectReference Include="..\SensorActor\SensorActor.csproj" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
   <PropertyGroup>

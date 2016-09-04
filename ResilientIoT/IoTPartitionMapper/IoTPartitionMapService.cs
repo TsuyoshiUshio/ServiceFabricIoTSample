@@ -9,13 +9,14 @@ using Microsoft.ServiceFabric.Services.Communication.Runtime;
 using Microsoft.ServiceFabric.Services.Runtime;
 using Microsoft.ServiceFabric.Data;
 using Microsoft.ServiceBus.Messaging;
+using Microsoft.ServiceFabric.Services.Remoting;
 
 namespace IotPartitionMapService
 {
     /// <summary>
     /// An instance of this class is created for each service replica by the Service Fabric runtime.
     /// </summary>
-    public class IoTPartitionMapperService : StatefulService
+    public class IoTPartitionMapperService : StatefulService, IService 
     {
         public IoTPartitionMapperService(StatefulServiceContext context)
             : base(context)

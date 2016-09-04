@@ -32,6 +32,13 @@ namespace IoTPartitionMapper.Tests
             return this.StateManager;
         }
 
+        public static MockIoTPartitionMapper MockObjectFactory()
+        {
+            var context = new StatefulServiceContext(new NodeContext("192.168.11.10", new NodeId(new BigInteger(3), new BigInteger(1)), new BigInteger(1), "Node1", "some"), new Mock<ICodePackageActivationContext>().Object, "aaaType", new Uri("fabric:/aaa"), null, new Guid(), 1);
+            IReliableStateManagerReplica replica = new MockReliableStateManager();
+            return new MockIoTPartitionMapper(context, replica);
+        }
+
 
     }
     

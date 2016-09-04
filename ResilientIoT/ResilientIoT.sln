@@ -13,6 +13,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mocks", "Mocks\Mocks.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{143A170D-B44C-4FFD-B3CB-095A0F150314}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SensorActor", "SensorActor\SensorActor.csproj", "{87A5EAA0-221B-4DC7-8A68-478B9BD58723}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SensorActor.Interfaces", "SensorActor.Interfaces\SensorActor.Interfaces.csproj", "{9DC4E210-0FD1-4EDF-91AF-A0A3EC2DE9C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FloorActor", "FloorActor\FloorActor.csproj", "{AE1D8D94-0628-44BB-9119-02B72DF9DD9C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FloorActor.Interfaces", "FloorActor.Interfaces\FloorActor.Interfaces.csproj", "{23CD705E-F8F1-4401-94D4-2292BD728FD3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SensorActor.Test", "SensorActor.Test\SensorActor.Test.csproj", "{FD8DB056-1694-47A3-83A4-54B3801C8BBC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -59,6 +69,38 @@ Global
 		{143A170D-B44C-4FFD-B3CB-095A0F150314}.Release|Any CPU.Build.0 = Release|Any CPU
 		{143A170D-B44C-4FFD-B3CB-095A0F150314}.Release|x64.ActiveCfg = Release|Any CPU
 		{143A170D-B44C-4FFD-B3CB-095A0F150314}.Release|x64.Build.0 = Release|Any CPU
+		{87A5EAA0-221B-4DC7-8A68-478B9BD58723}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{87A5EAA0-221B-4DC7-8A68-478B9BD58723}.Debug|x64.ActiveCfg = Debug|x64
+		{87A5EAA0-221B-4DC7-8A68-478B9BD58723}.Debug|x64.Build.0 = Debug|x64
+		{87A5EAA0-221B-4DC7-8A68-478B9BD58723}.Release|Any CPU.ActiveCfg = Release|x64
+		{87A5EAA0-221B-4DC7-8A68-478B9BD58723}.Release|x64.ActiveCfg = Release|x64
+		{87A5EAA0-221B-4DC7-8A68-478B9BD58723}.Release|x64.Build.0 = Release|x64
+		{9DC4E210-0FD1-4EDF-91AF-A0A3EC2DE9C0}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{9DC4E210-0FD1-4EDF-91AF-A0A3EC2DE9C0}.Debug|x64.ActiveCfg = Debug|x64
+		{9DC4E210-0FD1-4EDF-91AF-A0A3EC2DE9C0}.Debug|x64.Build.0 = Debug|x64
+		{9DC4E210-0FD1-4EDF-91AF-A0A3EC2DE9C0}.Release|Any CPU.ActiveCfg = Release|x64
+		{9DC4E210-0FD1-4EDF-91AF-A0A3EC2DE9C0}.Release|x64.ActiveCfg = Release|x64
+		{9DC4E210-0FD1-4EDF-91AF-A0A3EC2DE9C0}.Release|x64.Build.0 = Release|x64
+		{AE1D8D94-0628-44BB-9119-02B72DF9DD9C}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{AE1D8D94-0628-44BB-9119-02B72DF9DD9C}.Debug|x64.ActiveCfg = Debug|x64
+		{AE1D8D94-0628-44BB-9119-02B72DF9DD9C}.Debug|x64.Build.0 = Debug|x64
+		{AE1D8D94-0628-44BB-9119-02B72DF9DD9C}.Release|Any CPU.ActiveCfg = Release|x64
+		{AE1D8D94-0628-44BB-9119-02B72DF9DD9C}.Release|x64.ActiveCfg = Release|x64
+		{AE1D8D94-0628-44BB-9119-02B72DF9DD9C}.Release|x64.Build.0 = Release|x64
+		{23CD705E-F8F1-4401-94D4-2292BD728FD3}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{23CD705E-F8F1-4401-94D4-2292BD728FD3}.Debug|x64.ActiveCfg = Debug|x64
+		{23CD705E-F8F1-4401-94D4-2292BD728FD3}.Debug|x64.Build.0 = Debug|x64
+		{23CD705E-F8F1-4401-94D4-2292BD728FD3}.Release|Any CPU.ActiveCfg = Release|x64
+		{23CD705E-F8F1-4401-94D4-2292BD728FD3}.Release|x64.ActiveCfg = Release|x64
+		{23CD705E-F8F1-4401-94D4-2292BD728FD3}.Release|x64.Build.0 = Release|x64
+		{FD8DB056-1694-47A3-83A4-54B3801C8BBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD8DB056-1694-47A3-83A4-54B3801C8BBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD8DB056-1694-47A3-83A4-54B3801C8BBC}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{FD8DB056-1694-47A3-83A4-54B3801C8BBC}.Debug|x64.Build.0 = Debug|Any CPU
+		{FD8DB056-1694-47A3-83A4-54B3801C8BBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD8DB056-1694-47A3-83A4-54B3801C8BBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD8DB056-1694-47A3-83A4-54B3801C8BBC}.Release|x64.ActiveCfg = Release|Any CPU
+		{FD8DB056-1694-47A3-83A4-54B3801C8BBC}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

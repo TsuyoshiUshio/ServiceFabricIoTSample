@@ -4,10 +4,22 @@
     <Parameter Name="IoTPartitionMapper_MinReplicaSetSize" DefaultValue="3" />
     <Parameter Name="IoTPartitionMapper_PartitionCount" DefaultValue="1" />
     <Parameter Name="IoTPartitionMapper_TargetReplicaSetSize" DefaultValue="3" />
+    <Parameter Name="FloorActorService_PartitionCount" DefaultValue="10" />
+    <Parameter Name="FloorActorService_MinReplicaSetSize" DefaultValue="3" />
+    <Parameter Name="FloorActorService_TargetReplicaSetSize" DefaultValue="3" />
+    <Parameter Name="SensorActorService_PartitionCount" DefaultValue="10" />
+    <Parameter Name="SensorActorService_MinReplicaSetSize" DefaultValue="3" />
+    <Parameter Name="SensorActorService_TargetReplicaSetSize" DefaultValue="3" />
   </Parameters>
   <!-- Import the ServiceManifest from the ServicePackage. The ServiceManifestName and ServiceManifestVersion 
        should match the Name and Version attributes of the ServiceManifest element defined in the 
        ServiceManifest.xml file. -->
+  <ServiceManifestImport>
+    <ServiceManifestRef ServiceManifestName="FloorActorPkg" ServiceManifestVersion="1.0.0" />
+  </ServiceManifestImport>
+  <ServiceManifestImport>
+    <ServiceManifestRef ServiceManifestName="SensorActorPkg" ServiceManifestVersion="1.0.0" />
+  </ServiceManifestImport>
   <ServiceManifestImport>
     <ServiceManifestRef ServiceManifestName="IoTPartitionMapperPkg" ServiceManifestVersion="1.0.0" />
     <ConfigOverrides />
@@ -21,6 +33,16 @@
     <Service Name="IoTPartitionMapper">
       <StatefulService ServiceTypeName="IoTPartitionMapperType" TargetReplicaSetSize="[IoTPartitionMapper_TargetReplicaSetSize]" MinReplicaSetSize="[IoTPartitionMapper_MinReplicaSetSize]">
         <UniformInt64Partition PartitionCount="[IoTPartitionMapper_PartitionCount]" LowKey="-9223372036854775808" HighKey="9223372036854775807" />
+      </StatefulService>
+    </Service>
+    <Service Name="FloorActorService" GeneratedIdRef="92481446-8e8a-4626-8681-abe3e6abc9c9|Persisted">
+      <StatefulService ServiceTypeName="FloorActorServiceType" TargetReplicaSetSize="[FloorActorService_TargetReplicaSetSize]" MinReplicaSetSize="[FloorActorService_MinReplicaSetSize]">
+        <UniformInt64Partition PartitionCount="[FloorActorService_PartitionCount]" LowKey="-9223372036854775808" HighKey="9223372036854775807" />
+      </StatefulService>
+    </Service>
+    <Service Name="SensorActorService" GeneratedIdRef="0297cfa2-9060-4d2a-a0da-9fefb5834354|Persisted">
+      <StatefulService ServiceTypeName="SensorActorServiceType" TargetReplicaSetSize="[SensorActorService_TargetReplicaSetSize]" MinReplicaSetSize="[SensorActorService_MinReplicaSetSize]">
+        <UniformInt64Partition PartitionCount="[SensorActorService_PartitionCount]" LowKey="-9223372036854775808" HighKey="9223372036854775807" />
       </StatefulService>
     </Service>
   </DefaultServices>
